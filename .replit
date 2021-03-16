@@ -1,0 +1,2 @@
+language = "deno"
+run = "./repl.deploy deno run -A server.ts"
