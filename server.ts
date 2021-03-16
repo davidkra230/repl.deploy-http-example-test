@@ -10,14 +10,15 @@ app.post("/refresh", async (req, res) => {
     console.log("repl.deploy" + req.body + req.headers.get("Signature"))
 
     const result: {
-        error: string
+        body: string
         status: number
     } = JSON.parse((await getStdinLine())!)
 
-    res.setStatus(result.status).end(result.error)
+    await res.setStatus(result.status).end(result.body)
+    console.log("repl.deploy-success")
 })
 
-app.get("/", async (req, res) => {
+app.get("/", async (_, res) => {
     res.end("OK")
 })
 
