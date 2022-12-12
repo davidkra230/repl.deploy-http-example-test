@@ -19,7 +19,7 @@ app.post("/refresh", async (req, res) => {
 })
 
 app.get("/", async (_, res) => {
-    res.end("OK")
+    res.end("OK.")
 })
 
 async function getStdinLine() {
