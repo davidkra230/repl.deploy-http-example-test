@@ -7,7 +7,7 @@ app.use(text())
 console.log("server running")
 
 app.post("/refresh", async (req, res) => {
-    console.log("repl.deploy" + req.body + req.headers.get("Signature"))
+    console.log("repl.deploy" + req.body + req.headers.get("signature"))
 
     const result: {
         body: string
